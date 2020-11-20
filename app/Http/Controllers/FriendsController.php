@@ -3,45 +3,49 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comment;
+use App\Models\Friend;
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
-class HomeController extends Controller
+class FriendsController extends Controller
 {
     public function index(Request $request) {
       $user = Auth::user();
 
-      $edittingId = session('post.editting');
-      $editting = null;
-
-      if($edittingId) {
-        $editting = Post::find($edittingId);
-      }
-
-      return view('home', [
+      return view('friends', [
         'user' => $user,
-        'editting' => $editting,
       ]);
     }
 
-    public function createPost(Request $request) {
+    public function addFriend(Request $request) {
       /** @var \App\Models\User */
       $user = Auth::user();
 
-      $content = $request->only('content');
+      $username = $request->input('username');
 
-      if(empty($content['content'])) {
-        return view('home', [
+      if(!$username) {
+        return view('friends', [
           'user' => $user,
-          'content_required' => true,
+          'username_required' => true,
         ]);
       }
 
-      $user->posts()->create($content);
+      $friend_user = User::firstWhere('username', $username);
+      if($friend_user) {
+        $friend = Friend::create([
+          'user_id' => $user->id,
+          'friend_id' => $friend_user->id,
+        ]);
+        return redirect()->route('friends');
+      }
 
-      return redirect()->route('home');
+      return view('friends', [
+        'user' => $user,
+        'user_not_found' => true,
+      ]);
     }
 
     public function deletePost(Request $request, $id) {
@@ -90,10 +94,6 @@ class HomeController extends Controller
       $newComment->user_id = $user->id;
       $newComment->post_id = $post->id;
       $newComment->save();
-
-      if($post->user_id !== $user->id) {
-        return redirect()->route('friends');
-      }
 
       return redirect()->route('home');
     }

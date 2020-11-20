@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #e1e2e9;
+}
+.container-fluid{
+    padding-top:50px;
+}
+.container-fluid .row .sidebar-menu  a
+{
+    color: #000;
+    text-decoration: none;
+}
+/*Registro y Login*/
+.content{
+    margin: 8%;
+    background-color: #fff;
+    padding: 4rem 1rem 4rem 1rem;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .05);
+}
+.error{
+    margin-top: 3px;
+    color:red;
+    font-size: 13px;
+}
+.primary-color{
+    color: #565ec4;
+}
+.secundary-color{
+    color: #e1e2e9;
+}
+.third-color{
+    color: rgba(170, 174, 225, 0.37);
+}
+.title1-text{
+    font-style: normal;
+    font-weight: 600 !important;
+    text-align: center;
+}
+.title2-text{   
+    font-size: 15px;
+    font-weight: bold ;
+}
+.title3-text{
+    font-size: 13px;
+    font-weight: bold;
+}
+.form-control{
+    display:block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-color: #565ec4 !important;
+    border-style: solid !important;
+    border-width: 0 0 1px 0 !important;
+    padding: 0px !important;
+    color: #495057;
+    height: auto;
+    border-radius: 0;
+    background-color: #fff;
+    background-clip: padding-box;
+}
+.form-control:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: none;
+}
+.buttons1{
+    text-align: center;
+}
+.btn-class{
+    width: 100px;
+    background-color: #fff;
+    border-color: #565ec4;
+    color: #565ec4;
+}
+.btn-class:hover{
+    background-color: #565ec4;
+    color: #fff;
+}
+/*HOME*/
+header{
+    padding: 10px;
+    height: 55px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .05);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+.img-opciones{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.caja-agregar{
+    margin: 20px 10px 20px 0px;
+    padding:20px;
+    background: #fff;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .05);
+    position: relative;
+}
+.btn-group-sm>.btn, .btn-sm{
+    padding: .1rem .5rem .1rem 0.35rem;
+    background-color:#fff;
+    border-color:   #fff;
+    color: #565ec4;
+}
+.textarea-autosize{
+    background: rgba(170, 174, 225, 0.37);
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 2.25rem;
+    min-height: 2.25rem;
+    resize: none;
+    font-weight: lighter;
+}
+.caja-listado{
+    padding: 20px;
+    margin: 0px 10px 20px 0px;
+    background: #fff;
+    position: relative;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .05);
+}
+.line1{
+    border-top: 1px solid rgba(170, 174, 225, .5);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.caja-comentario{
+    margin-bottom: 5px;
+    padding: 5px;
+    background: rgba(170, 174, 225, 0.37);   
+}
+.caja-comentario p{
+    font-size: 13px;
+    display: inline;
+}
+/*SIDEBAR-MENU*/
+.sidebar-menu{
+    padding-left:60px;
+    padding-bottom: 30px;
+}
+.sidebar-menu .row{
+    margin-bottom: 40px;
+}
+.sidebar-menu .row h5{
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.icono-menu{
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+/*SIDEBAR-PERFIl*/
+.sidebar-perfil{
+    margin-top: 20px;
+}
+
+/*CAJA-LISTADO*/
+.caja-listado-amigos{
+    margin-right:10px;
+    padding: 5px 5px 0px 5px;
+    position: relative;
+}

@@ -10,7 +10,6 @@ const mix = require("laravel-mix");
  |
  */
 
-mix.sass("resources/sass/app.scss", "public/css").copyDirectory(
-    "resources/images",
-    "public/images"
-);
+mix.copy("resources/images/**", "public/images");
+mix.styles(["resources/css/estilo.css"], "public/css/estilo.css");
+mix.browserSync("127.0.0.1:8000");

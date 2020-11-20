@@ -1,3 +1,10 @@
 {
-    "/css/app.css": "/css/app.css"
+    "/images/friends.png": "/images/friends.png",
+    "/images/friends1.png": "/images/friends1.png",
+    "/images/icono.png": "/images/icono.png",
+    "/images/logo.png": "/images/logo.png",
+    "/images/logout.png": "/images/logout.png",
+    "/images/logout1.png": "/images/logout1.png",
+    "/images/man.png": "/images/man.png",
+    "/css/estilo.css": "/css/estilo.css"
 }

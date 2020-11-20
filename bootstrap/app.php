@@ -51,5 +51,5 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
-
+\Moment\Moment::setLocale('es_ES');
 return $app;
