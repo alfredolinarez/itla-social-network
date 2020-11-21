@@ -30,10 +30,13 @@
 
         <!--Comentario-->
         @foreach($post->comments as $comment)
-          <div class="caja-comentario h-auto d-inline-block">
-            <h5 class="title3-text primary-color" style="margin-bottom: 0px;" id="comment">{{ $comment->user->fullname }}</h5>
-            <p>{{ $comment->comment }}</p>
+          <div>
+            <div class="caja-comentario h-auto d-inline-block">
+              <h5 class="title3-text primary-color" style="margin-bottom: 0px;" id="comment">{{ $comment->user->fullname }}</h5>
+              <p>{{ $comment->comment }}</p>
+            </div>
           </div>
+          
         @endforeach
       </div>
     @empty
@@ -67,7 +70,6 @@
       <div class="caja-listado-amigos">
           <h5 class="title2-text primary-color text-left" id="user">{{ $friend->fullname }}</h5>
           <p class="text-left">{{ $friend->username }}</p>
-        </div>
       </div>
     @empty
       <p class="text-center primary-color">No tienes amigos</p>

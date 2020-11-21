@@ -130,6 +130,7 @@ header{
     margin-bottom: 5px;
 }
 .caja-comentario{
+    border-radius:10px;
     margin-bottom: 5px;
     padding: 5px;
     background: rgba(170, 174, 225, 0.37);   
