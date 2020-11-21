@@ -30,16 +30,16 @@ class HomeController extends Controller
       /** @var \App\Models\User */
       $user = Auth::user();
 
-      $content = $request->only('content');
+      $content = $request->input('content');
 
-      if(empty($content['content'])) {
+      if(!$content) {
         return view('home', [
           'user' => $user,
           'content_required' => true,
         ]);
       }
 
-      $user->posts()->create($content);
+      $user->posts()->create(['content' => $content]);
 
       return redirect()->route('home');
     }
