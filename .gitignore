@@ -11,10 +11,3 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 /mounts
-/public/**
-!/public/.htaccess
-!/public/favicon.ico
-!/public/index.php
-!/public/mix-manifest.json
-!/public/robots.txt
-!/public/web.config
