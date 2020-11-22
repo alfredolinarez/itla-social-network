@@ -42,7 +42,7 @@
                 @endif
             </div>
             <div class="p-2 bd-highlight">
-                <div class="btn-group" style="margin-right:-40px; margin-top:-55px">
+                <div class="btn-group" style="margin-right:-24px; margin-top:-21px">
                     <button class="btn btn-danger btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -63,10 +63,12 @@
 
         <!--Comentario-->
         @foreach($post->comments as $comment)
+        <div>
           <div class="caja-comentario h-auto d-inline-block">
             <h5 class="title3-text primary-color" style="margin-bottom: 0px;" id="comment">{{ $comment->user->fullname }}</h5>
             <p>{{ $comment->comment }}</p>
           </div>
+        </div>
         @endforeach
       </div>
     @empty
